@@ -1,0 +1,27 @@
+<div class="container pt-5">
+
+    <h1 class="text-center"> Bienvenido!! </h1>
+    <h2 class="text-center"> Vamos a crear tu historia / post :</h2>
+
+    <form id="create_posts" method="get" action="/posts/create">
+        <div class="form-group">
+            <label for="title">Titulo</label>
+            <input name="title" class="form-control" placeholder="Ingresa un titulo para tu post">
+        </div>
+
+        <div class="form-group">
+            <label for="image_url">Link Imagen</label>
+            <input name="image_url" class="form-control" placeholder="ingresa el link que lleva a tu imagen">
+        </div>
+
+        <div class="form-group">
+            <label for="content">Contenido</label>
+            <textarea name="content" class="form-control"></textarea> 
+        </div> 
+
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+
+    </form>
+</div>

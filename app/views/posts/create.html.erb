@@ -1,0 +1,28 @@
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+        <div class="alert alert-danger mt-5" role="alert">
+            <h4 class="alert-heading"><strong>Oh boy!</strong> something went wrong</h4>
+            <p><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</p>
+            <hr>
+            <ul>
+                <% @post.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+<% else %>
+    <div class="alert alert-success mt-5" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Your post has been uploaded successfully !!!</p>
+    </div>    
+<% end %>
+
+<div class="row">
+    <div class="col">   
+        <%= link_to "Go to Post Creation", posts_dashboard_path %>
+    </div>
+    <div class="col text-right">
+        <%= link_to "Back to Index", root_path %>
+    </div>
+</div>
